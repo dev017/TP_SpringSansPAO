@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="notification1" class="com.formation.spring.technique.ConsoleNotification">
+	</bean>
+	<bean id="g1" class="com.formation.spring.fonctionnel.GestionAdherent">	
+		<property name="notification">
+		   <ref bean="notification1"/>
+		</property>
+	</bean>
+		<bean id="adherent1" class="com.formation.spring.fonctionnel.Adherent">
+		<property name="codeAdherent">
+			<value>C100</value>
+		</property>
+		<property name="nom">
+			<value>Mohammed</value>
+		</property>
+		<property name="prenom">
+			<value>Ali</value>
+		</property>
+		<property name="adresse">
+			<value>Rabat</value>
+		</property>
+	</bean>
+		<bean id="adherent2" class="com.formation.spring.fonctionnel.Adherent">
+		<constructor-arg index="0">
+			<value>C200</value>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<value>Hari</value>
+		</constructor-arg>
+		<constructor-arg index="2">
+			<value>Badr</value>
+		</constructor-arg>
+		<constructor-arg index="3">
+			<value>Casablanca</value>
+		</constructor-arg>
+	</bean>
+	
+</beans>
